@@ -1,0 +1,166 @@
+/* Authentication Page Styles */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 30px 20px;
+  background-color: #f7f9fc;
+}
+
+.auth-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 480px;
+  padding: 30px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.auth-header h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.auth-header p {
+  color: #7f8c8d;
+  margin: 0;
+  font-size: 15px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.form-field input,
+.form-field select {
+  height: 45px;
+  padding: 0 15px;
+  border: 1px solid #dcdfe6;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dcdfe6;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.phone-prefix {
+  background-color: #f5f7fa;
+  padding: 0 12px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #dcdfe6;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.phone-input input {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+}
+
+.otp-sent-message {
+  font-size: 14px;
+  color: #27ae60;
+  margin: 5px 0 0;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.auth-button {
+  height: 48px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-button:hover {
+  background-color: #2980b9;
+}
+
+.auth-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0;
+  text-decoration: underline;
+}
+
+.text-button:hover {
+  color: #2980b9;
+}
+
+.auth-footer {
+  margin-top: 25px;
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+#recaptcha-container {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 20px;
+  }
+  
+  .auth-header h1 {
+    font-size: 24px;
+  }
+} 

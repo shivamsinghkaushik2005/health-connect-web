@@ -1,0 +1,121 @@
+.language-selector {
+  position: relative;
+  margin-left: 20px;
+  z-index: 1000;
+}
+
+.language-selector-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.language-selector-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.language-flag {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.language-name {
+  margin-right: 8px;
+}
+
+.language-arrow {
+  font-size: 10px;
+  transition: transform 0.2s ease;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 150px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 1001;
+  animation: dropdown 0.3s ease;
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.language-option:hover {
+  background-color: #f5f5f5;
+}
+
+.language-option.active {
+  background-color: #f0f7ff;
+  color: #4285F4;
+  font-weight: 500;
+}
+
+/* Dark theme adaptation for non-white navbars */
+.dark-navbar .language-selector-button {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-navbar .language-selector-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Light theme adaptation for white navbars */
+.light-navbar .language-selector-button {
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-navbar .language-selector-button:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .language-selector {
+    margin-left: 10px;
+  }
+  
+  .language-name {
+    display: none;
+  }
+  
+  .language-selector-button {
+    padding: 6px 10px;
+  }
+} 
